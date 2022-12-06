@@ -6,10 +6,10 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
             <div class="navbar-nav p-3">
-                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('homepage') }}">Beranda</a>
-                <a class="nav-link {{ Request::routeIs('announcement') ? 'active' : '' }}" href="{{ route('announcement') }}">Pengumuman</a>
-                <a class="nav-link {{ Request::routeIs('voting') ? 'active' : '' }}" href="{{ route('voting') }}">Pemilihan</a>
-                <a class="nav-link {{ Request::routeIs('voting.result') ? 'active' : '' }}" href="{{ route('voting.result') }}">Hasil Pemilihan</a>
+                <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ route('homepage') }}">Home</a>
+                <a class="nav-link {{ Request::routeIs('announcement') ? 'active' : '' }}" href="{{ route('announcement') }}">Avizu</a>
+                <a class="nav-link {{ Request::routeIs('voting') ? 'active' : '' }}" href="{{ route('voting') }}">Eleisaun</a>
+                <a class="nav-link {{ Request::routeIs('voting.result') ? 'active' : '' }}" href="{{ route('voting.result') }}">Rezultadu Eleisaun</a>
             </div>
             <div class="navbar-nav p-3">
                 @if (auth()->guard('admin')->check())
@@ -23,7 +23,7 @@
                         <li>
                             <form action="{{ route('logout.admin') }}" method="post">
                                 @csrf
-                                <button type="submit" class="dropdown-item border-0 rounded text-uppercase"><i class="bi bi-box-arrow-right"></i> Keluar</button>
+                                <button type="submit" class="dropdown-item border-0 rounded text-uppercase"><i class="bi bi-box-arrow-right"></i> Sair</button>
                             </form>
                         </li>
                     </ul>
@@ -35,19 +35,19 @@
                         <i class="bi bi-person"></i> {{ auth()->user()->name }}
                     </a>
                     <ul class="dropdown-menu border-0 shadow-sm">
-                        <li><a class="dropdown-item" href="{{ route('profile') }}"><i class="bi bi-person-bounding-box"></i> Profil</a></li>
+                        <li><a class="dropdown-item" href="{{ route('profile') }}"><i class="bi bi-person-bounding-box"></i> Profile</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li>
                             <form action="{{ route('logout') }}" method="post">
                                 @csrf
-                                <button type="submit" class="dropdown-item border-0 rounded text-uppercase"><i class="bi bi-box-arrow-right"></i> Keluar</button>
+                                <button type="submit" class="dropdown-item border-0 rounded text-uppercase"><i class="bi bi-box-arrow-right"></i> Sair</button>
                             </form>
                         </li>
                     </ul>
                 </li>
                 @else
-                <a class="nav-link {{ Request::routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}"><i class="bi bi-box-arrow-in-right"></i> Masuk</a>
-                <a class="nav-link {{ Request::routeIs('register') ? 'active' : '' }}" href="{{ route('register') }}"><i class="bi bi-box-arrow-in-down"></i> Mendaftar</a>
+                <a class="nav-link {{ Request::routeIs('login') ? 'active' : '' }}" href="{{ route('login') }}"><i class="bi bi-box-arrow-in-right"></i> Entra</a>
+                <a class="nav-link {{ Request::routeIs('register') ? 'active' : '' }}" href="{{ route('register') }}"><i class="bi bi-box-arrow-in-down"></i> Rejistrasaun</a>
                 @endauth
                 @endif
             </div>

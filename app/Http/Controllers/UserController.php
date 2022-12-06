@@ -76,7 +76,7 @@ class UserController extends Controller
             'birth_date' => 'required'
         ]);
         if ($request->username != auth()->user()->username) {
-            $rules['username'] = 'required|min:14|max:255|unique:users,username';
+            $rules['username'] = 'required|min:11|max:255|unique:users,username';
         }
         if ($request->password != '') {
             $rules['password'] = 'required|min:6|max:100';

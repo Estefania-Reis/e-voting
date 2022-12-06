@@ -6,13 +6,13 @@
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
             <div class="navbar-nav p-3">
-                <a class="nav-link {{ Request::is('dashboard/user*') ? 'active' : '' }}" href="{{ route('user.index') }}">Data Pemilih</a>
-                <a class="nav-link {{ Request::is('dashboard/candidate*') ? 'active' : '' }}" href="{{ route('candidate.index') }}">Data Kandidat</a>
-                <a class="nav-link {{ Request::is('dashboard/voting_data') ? 'active' : ''  }}" href="{{ route('voting.data') }}">Data Pemilihan</a>
-                <a class="nav-link {{ Request::is('dashboard/admin*') ? 'active' : '' }}" href="{{ route('admin.index') }}">Data Admin</a>
+                <a class="nav-link {{ Request::is('dashboard/user*') ? 'active' : '' }}" href="{{ route('user.index') }}">Dadus Eleitor</a>
+                <a class="nav-link {{ Request::is('dashboard/candidate*') ? 'active' : '' }}" href="{{ route('candidate.index') }}">Dadus Kandidatu</a>
+                <a class="nav-link {{ Request::is('dashboard/voting_data') ? 'active' : ''  }}" href="{{ route('voting.data') }}">Dadus Eleisaun</a>
+                <a class="nav-link {{ Request::is('dashboard/admin*') ? 'active' : '' }}" href="{{ route('admin.index') }}">Dadus Admin</a>
             </div>
             <div class="navbar-nav p-3">
-                <a class="nav-link {{ Request::is('dashboard/configuration') ? 'active' : ''  }}" href="{{ route('configuration') }}"><i class="bi bi-nut"></i> Konfigurasi</a>
+                <a class="nav-link {{ Request::is('dashboard/configuration') ? 'active' : ''  }}" href="{{ route('configuration') }}"><i class="bi bi-nut"></i> Konfigurasaun</a>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                         <i class="bi bi-person"></i> {{ strtok(auth()->guard('admin')->user()->name, " ") }}
@@ -34,7 +34,7 @@
                         <li>
                             <form action="{{ route('logout.admin') }}" method="post">
                                 @csrf
-                                <button type="submit" class="dropdown-item border-0 rounded text-uppercase"><i class="bi bi-box-arrow-right"></i>&nbsp; Keluar</button>
+                                <button type="submit" class="dropdown-item border-0 rounded text-uppercase"><i class="bi bi-box-arrow-right"></i>&nbsp; Sair</button>
                             </form>
                         </li>
                     </ul>

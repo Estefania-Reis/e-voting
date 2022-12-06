@@ -4,7 +4,7 @@
             <div class="col-lg-4 my-auto">
                 <div class="card border-0 shadow">
                     <div class="card-header text-center fs-3 fw-bold text-uppercase p-3 border-0 shadow-sm">
-                        Mendaftar
+                        Rejistrasaun
                     </div>
                     <div class="card-body p-3">
                         <form action="{{ route('register') }}" method="post" id="formRegister">
@@ -12,10 +12,10 @@
                             <x-form-user :profile="$profile"></x-form-user>
                             <div class="my-4">
                                 <div class="d-grid gap-2 col-lg-6 mx-auto my-1">
-                                    <button type="submit" class="btn btn-rounded btn-lg btn-primary"><i class="bi bi-box-arrow-in-down"></i> Mendaftar</button>
+                                    <button type="submit" class="btn btn-rounded btn-lg btn-primary"><i class="bi bi-box-arrow-in-down"></i> Rejistrasaun</button>
                                 </div>
                             </div>
-                            <small class="d-block text-center p-3">Sudah Memiliki Akun? <a href="{{ route('login') }}" class="text-decoration-none fw-bold">Masuk</a></small>
+                            <small class="d-block text-center p-3">Iha Ona Konta? <a href="{{ route('login') }}" class="text-decoration-none fw-bold">Entra</a></small>
                         </form>
                     </div>
                 </div>

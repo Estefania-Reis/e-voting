@@ -4,7 +4,7 @@
             <div class="col-lg-4 my-auto">
                 <div class="card border-0 shadow">
                     <div class="card-header text-center fs-3 fw-bold text-uppercase p-3 border-0 shadow-sm">
-                        Profil
+                        Profile
                     </div>
                     <div class="card-body p-4">
                         <form action="" method="post">

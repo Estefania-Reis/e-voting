@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -16,13 +17,13 @@ class DatabaseSeeder extends Seeder
         Admin::create([
             'name' => 'Fikri Omar',
             'username' => 'fikriomar16',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'password' => bcrypt('password'),
             'is_super' => 1
         ]);
         Admin::create([
             'name' => 'Super Admin',
             'username' => 'superadmin',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
+            'password' => bcrypt('password'),
             'is_super' => 1
         ]);
         \App\Models\Config::factory(1)->create();

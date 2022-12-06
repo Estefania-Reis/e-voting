@@ -6,7 +6,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
-                                <div class="text-xs fw-bold text-primary text-uppercase mb-1">Jumlah Pemilih</div>
+                                <div class="text-xs fw-bold text-primary text-uppercase mb-1">Total Eleitor</div>
                                 <div class="h5 mb-0 fw-bold text-dark">{{ $user }}</div>
                             </div>
                             <div class="col-auto">
@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
-                                <div class="text-xs fw-bold text-warning text-uppercase mb-1">Jumlah Kandidat</div>
+                                <div class="text-xs fw-bold text-warning text-uppercase mb-1">Total Kandidatu</div>
                                 <div class="h5 mb-0 fw-bold text-dark">{{ $candidate }}</div>
                             </div>
                             <div class="col-auto">
@@ -36,7 +36,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
-                                <div class="text-xs fw-bold text-success text-uppercase mb-1">Jumlah Sudah Memilih</div>
+                                <div class="text-xs fw-bold text-success text-uppercase mb-1">Total Vota Ona</div>
                                 <div class="h5 mb-0 fw-bold text-dark">{{ $vote }} / {{ $user }}</div>
                             </div>
                             <div class="col-auto">
@@ -51,7 +51,7 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col me-2">
-                                <div class="text-xs fw-bold text-danger text-uppercase mb-1">Waktu Pemilihan</div>
+                                <div class="text-xs fw-bold text-danger text-uppercase mb-1">Tempu Eleisaun</div>
                                 <div class="h6 mb-0 fw-bold text-dark">{{ date_format(new DateTime($config->start), "d/m/Y") }} - {{ date_format(new DateTime($config->start), "H:i") }}</div>
                             </div>
                             <div class="col-auto">
